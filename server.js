@@ -67,13 +67,13 @@ app.get('/api/health', (req, res) => {
 });
 
 // Routes
-app.use('/api/upload', uploadRoute);
-app.use('/api', pageToolsRoutes);
-app.use('/api', editingToolsRoutes);
-app.use('/api', conversionRoutes);
-app.use('/api', documentToolsRoutes);
-app.use('/api/unlock', unlockRoute);
-app.use('/api/download', downloadRoute);
+app.use('/upload', uploadRoute);
+app.use('/', pageToolsRoutes);
+app.use('/', editingToolsRoutes);
+app.use('/', conversionRoutes);
+app.use('/', documentToolsRoutes);
+app.use('/unlock', unlockRoute);
+app.use('/download', downloadRoute);
 
 // 404 handler
 app.use(notFound);
